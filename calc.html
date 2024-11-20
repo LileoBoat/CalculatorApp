@@ -12,7 +12,7 @@
         <div class="buttons">
             <button onclick="clearDisplay()">C</button>
             <button onclick="deleteDigit()">DEL</button>
-            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('%')">%</button>
             <button onclick="appendToDisplay('*')">*</button>
             <button onclick="appendToDisplay('7')">7</button>
             <button onclick="appendToDisplay('8')">8</button>
@@ -27,7 +27,10 @@
             <button onclick="appendToDisplay('3')">3</button>
             <button onclick="calculateResult()">=</button>
             <button onclick="appendToDisplay('0')" class="zero">0</button>
+            <button onclick="appendToDisplay('/')">/</button>
             <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="appendToDisplay('^')">x²</button>
+            <button onclick="calculateSquareRoot()">√</button>
         </div>
     </div>
     <script src="calc.js"></script>

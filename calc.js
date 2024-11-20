@@ -18,7 +18,36 @@ function deleteDigit() {
 // Function to calculate the result
 function calculateResult() {
     try {
-        display.value = eval(display.value);
+        const expression = display.replaceChild(/\^/g, '**');
+        display.value = eval(expression);
+    } catch (error) {
+        display.value = 'Error';
+    }
+}
+
+// Function to calculate the square root
+function calculateSquareRoot(){
+    try {
+        const value = parseFloat(display.value);
+        if (isNaN(value)) {
+            display.value = 'Error';
+        } else {
+            display.value = Math.sqrt(value);
+        }
+    } catch (error) {
+        display.value = 'Error';
+    }
+}
+
+// Function to calculate the square
+function calculateSquare(){
+    try {
+        const value = parseFloat(display.value);
+        if (isNaN(value)) {
+            display.value = 'Error';
+        } else {
+            display.value = value * value;
+        }
     } catch (error) {
         display.value = 'Error';
     }
