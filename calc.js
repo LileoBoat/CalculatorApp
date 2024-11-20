@@ -18,7 +18,7 @@ function deleteDigit() {
 // Function to calculate the result
 function calculateResult() {
     try {
-        const expression = display.replaceChild(/\^/g, '**');
+        const expression = display.value.replace(/\^/g, '**');
         display.value = eval(expression);
     } catch (error) {
         display.value = 'Error';
@@ -40,7 +40,7 @@ function calculateSquareRoot(){
 }
 
 // Function to calculate the square
-function calculateSquare(){
+function calculateSquare() {
     try {
         const value = parseFloat(display.value);
         if (isNaN(value)) {
